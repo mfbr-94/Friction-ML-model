@@ -3,7 +3,6 @@
 
 # In[ ]:
 
-
 import streamlit as st
 import numpy as np
 import pickle
@@ -39,11 +38,11 @@ st.title("Friction Coefficient Predictor")
 
 st.write("""
 This app predicts the **Response friction Coefficient u (steady values)** based on the following inputs:
-- MoDTC in model oil A (wt%)
-- Maximum pressure B (Mpa)
-- Temperature C (°C)
-- Sliding speed D (m/s)
-- Surface roughness (block) E (µm)
+- MoDTC in model oil A (wt%) - (0 to 0.54)
+- Maximum pressure B (Mpa) - (370 to 650)
+- Temperature C (°C) - (30 to 90)
+- Sliding speed D (m/s) - (0.55 to 1.1)
+- Surface roughness (block) E (µm) - (0.02 to 0.12)
 """)
 
 # --------------------------------------------------------------------------------
@@ -90,4 +89,3 @@ if model is not None:
             st.error(f"Error during prediction: {e}")
 else:
     st.error("The model could not be loaded. Please check the GitHub URL or model file.")
-
