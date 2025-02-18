@@ -72,7 +72,7 @@ if model is not None:
     # Input widgets for the five parameters
     modtc = st.number_input('MoDTC in model oil A (wt%)', min_value=0.0, format="%.2f")
     max_pressure = st.number_input('Maximum pressure B (Mpa)', min_value=0.0, format="%.2f")
-    temperature = st.number_input('Temperature C (°C)', format="%.2f", value=25.0)
+    temperature = st.number_input('Temperature C (°C)', format="%.2f", value=0.0)
     sliding_speed = st.number_input('Sliding speed D (m/s)', min_value=0.0, format="%.2f")
     surface_roughness = st.number_input('Surface roughness (block) E (µm)', min_value=0.0, format="%.2f")
 
